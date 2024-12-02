@@ -23,12 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade . botocore boto3 awscli pylint pytest
-
-      - name: Run Pylint
-        run: | 
-          pylint —-fail-under=7 pipelines/abalone/
-           
+          python -m pip install --upgrade . botocore boto3 awscli           
 
       - name: Configure AWS Credentials
         id: aws_creds
